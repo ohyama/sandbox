@@ -3,9 +3,13 @@ body, html {
 }
 
 div {
-	width: 50%;
+	width: 100px;
+	height: 100px;
 	background-color: green;
 	
+	display: inline-block;	/* inline inline-block block none */
+	overflow: scroll; /* visible hidden scroll */
+
 	border: red 5px solid;
 	margin: 10px;
 	padding: 10px;
