@@ -2,6 +2,13 @@ body, html {
 	height: 100%;
 }
 
+a:link { color: red; }
+a:visited { color: blue; }
+a:hover { font-weight: bold; }
+a:active { background-color: red; }
+h1:hover { background-color: orange; }
+input:focus { background-color: green; }
+
 .change {
 	cursor: pointer; /* move help wait pointer */
 }
