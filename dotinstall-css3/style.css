@@ -14,5 +14,8 @@ div {
 	/* opacity: 0.3; */
 	box-shadow: 10px 20px 5px rgba(0, 0, 0, 0.3) inset,
 				5px 5px 5px #FF0000;
+	text-shadow: 5px 5px 5px red;
+	font-size: 24px;
+	font-weight: bold;
 	
 }
