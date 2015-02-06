@@ -2,6 +2,11 @@ body, html {
 	height: 100%;
 }
 
+ul {
+	list-style-type: katakana; /* circle square katakana */
+	list-style-position: inside; /* outside inside */
+}
+
 img {
 	float: right;
 }
