@@ -17,5 +17,8 @@ div {
 	text-shadow: 5px 5px 5px red;
 	font-size: 24px;
 	font-weight: bold;
+
+	/* background: linear-gradient(red 10px, green 50px, blue); */
+	background: linear-gradient(45deg, red 10px, green 50px, blue); 
 	
 }
