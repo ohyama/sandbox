@@ -2,6 +2,10 @@ body, html {
 	height: 100%;
 }
 
+.change {
+	cursor: pointer; /* move help wait pointer */
+}
+
 ul {
 	list-style-type: katakana; /* circle square katakana */
 	list-style-position: inside; /* outside inside */
