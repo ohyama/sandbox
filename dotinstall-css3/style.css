@@ -46,3 +46,7 @@ div {
 	 50% { width: 100px; background: blue }
 	100% { width: 150px; background: red }
 }
+
+a[href^="http://"] {
+	color: green; font-weight: bold;
+}
