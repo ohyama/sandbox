@@ -55,4 +55,13 @@ div p:nth-of-type(2) {
 	color: green; font-weight: bold;
 }
 
+input[type="text"]:disabled {
+	border: 1px solid red;
+	font-weight: bold;
+}
+
+input[type="radio"]:checked + label {
+	font-weight: bold;
+}
+
 
