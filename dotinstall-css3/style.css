@@ -23,12 +23,14 @@ div {
 	/* background: linear-gradient(45deg, red 10px, green 50px, blue); */
 	/* background: radial-gradient(circle, red 10px, green 50px, blue); */
 
+	transition-property: all; 
+	transition-duration: 1s;
+	transition-timing-function: ease;   /* ease linear ease-in ease-out ease-inout */
+	/* transition-delay: 2s; */
 }
 
-#div2 {
-	transform-origin: 0px 0px;
-	transform: skew(45deg, 25deg);
-	
-
+#div2:hover {
+	height: 200px;
+	background-color: red;
 
 }
