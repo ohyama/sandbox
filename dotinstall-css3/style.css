@@ -50,3 +50,9 @@ div {
 a[href^="http://"] {
 	color: green; font-weight: bold;
 }
+
+div p:nth-of-type(2) {
+	color: green; font-weight: bold;
+}
+
+
