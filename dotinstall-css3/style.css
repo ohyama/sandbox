@@ -1,12 +1,12 @@
 div {
 	width: 500px;
-	height: 500px;
+	height: 250px;
 	padding: 10px;
 	margin: 30px;
 	background-color: orange;
 	border: solid 2px orangered;
 
-	border-radius: 50%;
+	/* border-radius: 50%; */
 	/* border-radius: 10px 20px 30px 40px; */
 	/* border-top-right-radius: 20px; */
 	/* Background-image: url('http://lohas.nicoseiga.jp/thumb/903794i?'); */ 
@@ -19,6 +19,7 @@ div {
 	font-weight: bold;
 
 	/* background: linear-gradient(red 10px, green 50px, blue); */
-	background: linear-gradient(45deg, red 10px, green 50px, blue); 
-	
+	/* background: linear-gradient(45deg, red 10px, green 50px, blue); */
+	background: radial-gradient(circle, red 10px, green 50px, blue); 
+
 }
