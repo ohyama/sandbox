@@ -23,14 +23,26 @@ div {
 	/* background: linear-gradient(45deg, red 10px, green 50px, blue); */
 	/* background: radial-gradient(circle, red 10px, green 50px, blue); */
 
-	transition-property: all; 
-	transition-duration: 1s;
-	transition-timing-function: ease;   /* ease linear ease-in ease-out ease-inout */
-	/* transition-delay: 2s; */
+	/*
+	animation-name: 
+	animation-duration:
+	animation-timing-function:
+	animation-delay:
+	animation-iteration-count:
+	animation-direction: normal alternate
+	*/
+
+	-webkit-animation: hoge 5s ease 1s infinite alternate;
 }
 
 #div2:hover {
 	height: 200px;
 	background-color: red;
 
+}
+
+@-webkit-keyframes hoge {
+	  0% { width: 50px;  background: orange }
+	 50% { width: 100px; background: blue }
+	100% { width: 150px; background: red }
 }
