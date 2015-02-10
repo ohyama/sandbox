@@ -1,23 +1,11 @@
-/*
-	- 文字列
-	- 数値
-	- 真偽値 true / false
-	- オブジェクト
-	-- 配列
-	-- 関数
-	-- 組み込みオブジェクト
-	-- undefined
-	-- null
- */
-
-var msg = "hello world",
-	x = 10,
-	y = 20;
-
-console.log(msg);
-console.log(x + y);
-
-
-(function(name) {
-	console.log("hello " + name);
-})("Tom");
+var i = 0;
+function show() {
+	console.log(i++);
+	var tid = setTimeout(function() {
+		show();
+	}, 1000);
+	if (tid > 10) {
+		clearTimeout(tid);
+	}
+}
+show();
