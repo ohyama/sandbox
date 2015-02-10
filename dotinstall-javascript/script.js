@@ -16,3 +16,11 @@ var msg = "hello world",
 
 console.log(msg);
 console.log(x + y);
+
+alert("hello");
+
+var ans = confirm("are you sure?");
+console.log(ans);
+
+var name = prompt("お名前は", "名無しさん");
+console.log(name);
