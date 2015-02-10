@@ -17,9 +17,7 @@ var msg = "hello world",
 console.log(msg);
 console.log(x + y);
 
-console.log(hello("ohyama"));
 
-function hello(name)
-{
-	return "hello " + name;
-}
+(function(name) {
+	console.log("hello " + name);
+})("Tom");
