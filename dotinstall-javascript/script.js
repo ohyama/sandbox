@@ -1,3 +1,13 @@
+var score = [100, 300, 500];
+console.log(score[0]);
+
+var m = [
+	[1, 2, 3],
+	[4, 5, 6]
+];
+console.log(m[1][1]);
+
+
 var i = 0;
 function show() {
 	console.log(i++);
