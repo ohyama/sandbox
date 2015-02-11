@@ -1,3 +1,17 @@
+var obj = {
+	name : "ohyama",
+	email : "ohyama@gmail",
+	greet : function(name) {
+		console.log("hello " + name + " from " + this.email);
+	}
+};
+
+console.log(obj["name"]);
+console.log(obj.name);
+console.log(obj.greet("ohyama"));
+
+
+
 var score = [100, 300, 500];
 console.log(score[0]);
 
