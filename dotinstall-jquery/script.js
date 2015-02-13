@@ -1,10 +1,9 @@
 // $(document).ready(function() {
 
 $(function() {
-	$('p').css('color', 'red').hide('slow');
-
-	$('#main').css('color', 'blue');
-	$('.item').css('color', 'green');
+	$('#sub .item').css('color', 'blue');
+	// $('p, .item').css('color', 'blue');
+	// $('.item + .item').css('color', 'blue');
 });
 
 /*
@@ -12,5 +11,10 @@ $(function() {
  * html p h1 ul
  * id #main
  * class .item
+ *
+ * > 直下の子要素
+ *   それ以下の要素
+ * , 複数の要素
+ * + 隣接する要素
  */
 
