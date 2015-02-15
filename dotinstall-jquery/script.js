@@ -67,6 +67,13 @@ $(function() {
 	//$('p').addClass('mystyle');
 	console.log($('a').attr('href'));
 
+	/* text
+	 * html
+	 * val
+	 * empty
+	 */
+	$('p').text('hogehoge');
+
 });
 
 /*
