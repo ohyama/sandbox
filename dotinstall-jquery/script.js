@@ -59,10 +59,14 @@ $(function() {
 
 	/* メソッド
 	 * addClass / removeClass
+	 * attr
+	 * data
 	 */
 	//$('p').css('color', 'red').css('background', 'blue');
-	console.log($('p').css('color'));
-	$('p').addClass('mystyle');
+	//console.log($('p').css('color'));
+	//$('p').addClass('mystyle');
+	console.log($('a').attr('href'));
+
 });
 
 /*
