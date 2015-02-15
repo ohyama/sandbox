@@ -44,7 +44,19 @@ $(function() {
 	 */
 	// $('#sub').parent().css('color', 'red');
 	// $('#sub > :eq(2)').next().css('color', 'red');
-	$('#sub > :eq(2)').siblings().css('color', 'red');
+	// $('#sub > :eq(2)').siblings().css('color', 'red');
+	
+	/* 属性セレクタ
+	 * =
+	 * !=
+	 * *=
+	 * ^=
+	 * $=
+	 */
+	//$('a[href="http://google.com"]').css('background', 'red');
+	//$('a[href!="http://google.com"]').css('background', 'red');
+	$('a[href*="faithcreates"]').css('background', 'red');
+
 });
 
 /*
