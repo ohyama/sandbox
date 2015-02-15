@@ -55,8 +55,14 @@ $(function() {
 	 */
 	//$('a[href="http://google.com"]').css('background', 'red');
 	//$('a[href!="http://google.com"]').css('background', 'red');
-	$('a[href*="faithcreates"]').css('background', 'red');
+	//$('a[href*="faithcreates"]').css('background', 'red');
 
+	/* メソッド
+	 * addClass / removeClass
+	 */
+	//$('p').css('color', 'red').css('background', 'blue');
+	console.log($('p').css('color'));
+	$('p').addClass('mystyle');
 });
 
 /*
