@@ -113,5 +113,17 @@ $(function() {
 		.mouseover(function(e) {
 			$(this).text(e.pageX);
 		});
+	
 
+	$('#name')
+		.focus(function() {
+			$(this).css('background', 'red');
+		})
+		.blur(function() {
+			$(this).css('background', 'white');
+		});
+
+	$('#members').change(function() {
+			console.log($(this).val());
+	});
 });
