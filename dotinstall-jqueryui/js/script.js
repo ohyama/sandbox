@@ -1,4 +1,5 @@
 $(function() {
 
+	$('#box').draggable();
 
 })
