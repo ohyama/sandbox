@@ -89,6 +89,7 @@ $(function() {
 	 * toggle
 	 */
 	//$('#main').hide(800);
+	/*
 	$('#main').toggle(800);
 	$('#main').toggle(800);
 	$('#main').toggle(800);
@@ -97,4 +98,20 @@ $(function() {
 	$('#main').fadeOut(800, function() {
 		alert('hello');
 	});
+	*/
+
+	$('#main').click(function() {
+		alert('hello');
+	});
+	$('#main')
+		.mouseover(function() {
+			$(this).css('background', 'green');
+		})
+		.mouseout(function() {
+			$(this).css('background', 'red');
+		})
+		.mouseover(function(e) {
+			$(this).text(e.pageX);
+		});
+
 });
