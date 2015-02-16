@@ -82,5 +82,19 @@ $(function() {
 
 	//$('#main > li:eq(1)').before(li);
 	//li.insertBefore($('#main > li:eq(1)'));
-	$('#main').prepend(li);
+	// $('#main').prepend(li);
+	
+	/* hide, show
+	 * fadeOut, fadeIn
+	 * toggle
+	 */
+	//$('#main').hide(800);
+	$('#main').toggle(800);
+	$('#main').toggle(800);
+	$('#main').toggle(800);
+	$('#main').toggle(800);
+	$('#main').toggle(800);
+	$('#main').fadeOut(800, function() {
+		alert('hello');
+	});
 });
