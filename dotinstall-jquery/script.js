@@ -126,4 +126,14 @@ $(function() {
 	$('#members').change(function() {
 			console.log($(this).val());
 	});
+
+	$('button').click(function() {
+		var p = $('<p>').text('hello').addClass('hello');
+		$(this).before(p);
+	});
+
+	$('body').on('click', '.hello', function() {
+		$(this).remove();
+	});
+
 });
