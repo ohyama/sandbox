@@ -72,26 +72,15 @@ $(function() {
 	 * val
 	 * empty
 	 */
-	$('p').text('hogehoge');
+	//$('p').text('hogehoge');
 
+	/* before, after -> insertBefore, insertAfter
+	 * prepend, append
+	 */
+
+	var li = $('<li>').text('just added');
+
+	//$('#main > li:eq(1)').before(li);
+	//li.insertBefore($('#main > li:eq(1)'));
+	$('#main').prepend(li);
 });
-
-/*
- * $('') セレクタ
- * html p h1 ul
- * id #main
- * class .item
- *
- * > 直下の子要素
- *   それ以下の要素
- * , 複数の要素
- * + 隣接する要素
- *
- * フィルタ
- * :eq()
- * :gt(), :lt()
- * :even, :odd
- * :contains()
- * :first, :last
- */
-
