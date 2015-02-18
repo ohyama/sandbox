@@ -1,10 +1,15 @@
 $(function() {
 
-	$('#box').draggable();
-	$('#target').droppable({
-		accept: "#box",
+	$('.box').draggable({
+		helper: 'clone'
+	});
+	$('.target').droppable({
+		accept: '.box',
+		hoverClass: 'hover',
+		tolerance: 'fit',
 		drop: function(event, ui) {
-			console.log('dropped"');
+			ui.draggable.clone().appendTo(this);
+			console.log('dropped!');
 		}
 	});
 })
