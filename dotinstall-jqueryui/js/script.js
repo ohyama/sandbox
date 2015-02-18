@@ -1,15 +1,11 @@
 $(function() {
-
-	$('.box').draggable({
-		helper: 'clone'
-	});
-	$('.target').droppable({
-		accept: '.box',
-		hoverClass: 'hover',
-		tolerance: 'fit',
-		drop: function(event, ui) {
-			ui.draggable.clone().appendTo(this);
-			console.log('dropped!');
-		}
-	});
+	$('.box')
+		.resizable({
+			handles: 'all',
+			acceptRatio: true,
+			stop: function(event, ui) {
+				console.log(ui.size.height, ui.size.width);
+			}
+		})
+		.draggable();
 })
