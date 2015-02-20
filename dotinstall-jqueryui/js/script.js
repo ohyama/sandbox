@@ -1,19 +1,13 @@
 $(function() {
-	var selected = new Array();
-	$('#selectable').selectable({
-		selected: function(event, ui) {
-			if (selected.indexOf(ui.selected.id) == - 1)
-			{
-				selected.push(ui.selected.id);
-			}
-			console.log(selected);
-		},
-		unselected: function(event, ui) {
-			var id = ui.unselected.id;
-			selected.splice(selected.indexOf(id), 1);
-		}
 	
+	$('#sortable').sortable({
+		cursor: 'wait',
+		opacity: 0.5,
+		update: function(event, ui) {
+			console.log($(this).sortable("serialize"));
+		}
 	});
+	
 
 	$('.box')
 		.resizable({
