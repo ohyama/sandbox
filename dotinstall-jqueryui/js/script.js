@@ -1,13 +1,6 @@
 $(function() {
 	
-	$('#sortable').sortable({
-		cursor: 'wait',
-		opacity: 0.5,
-		update: function(event, ui) {
-			console.log($(this).sortable("serialize"));
-		}
-	});
-	
+	$(".accordion").accordion();
 
 	$('.box')
 		.resizable({
