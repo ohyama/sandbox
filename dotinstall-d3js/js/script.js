@@ -9,34 +9,21 @@ svg.selectAll('circle')
 	.data(dataset)
 	.enter()
 	.append('circle')
-	.transition()
-	.delay(function(d, i) {
-		return i * 300;
+	.on('mouseover', function(d) {
+		d3.select(this).attr('fill', 'orange');
 	})
-	.duration(1000)
-	.ease('bounce')
-	.each('start', function() {
-		d3.select(this).attr({
-			fill: 'green',
-			r: 0,
-			cy	: h
-		});
+	.on('mouseout', function(d) {
+		d3.select(this).attr('fill', 'red');
+	})
+	.on('click', function(d) {
+		var rs = d3.select(this).attr('r');
+		alert(rs);
 	})
 	.attr({
 		cx: function (d, i) { return 50 + (i * 100); },
 		cy: h / 2,
 		r: function(d) { return d; },
 		fill: 'red'
-	})
-	.each('end', function() {
-		d3.select(this)
-			.transition()
-			.duration(800)
-			.attr({
-				fill: 'pink',
-				r: 0,
-				cy: 0
-			});
 	});
 
 var p = d3.select('body').selectAll('p');
