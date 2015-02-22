@@ -1,22 +1,18 @@
-/*
- * 要素を指定
- * select, selectAll
- *
- * 値を設定、取得
- * text
- * attr
- * style
- * append
- * style
- * append
- * remove
- */
+var dataset = [12, 24, 36, 48];
+var p = d3.select('body').selectAll('p');
 
-var dataset = [12, 24, 36];
-var p = d3.select('body').selectAll('p')
+// data binding
+var update = p.data(dataset);
+var enter = update.enter();
+var exit = update.exit();
 
-p.data(dataset).text(function(d, i) {
-	return i + '番目は' + d + 'です。';
+update.text(function(d) {
+	return "update:" + d;
 });
 
+enter.append('p').text(function(d) {
+	return "enter:" + d;
+});
+
+exit.style('color', 'red');
 
