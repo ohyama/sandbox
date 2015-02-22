@@ -1,8 +1,6 @@
 $(function() {
 
-	$('img').showsize({
-		size: 20
-	});
+	$('img').showsize();
 
 });
 
