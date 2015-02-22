@@ -22,6 +22,10 @@ $(function() {
 	$('button')
 		.button()
 		.click(function() {
+			$(this).effect('explode', {
+					pieces: 4	
+				}
+			);
 			console.log('click!');
 			$('#msg').dialog('open');
 		});
