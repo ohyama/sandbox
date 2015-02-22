@@ -1,4 +1,8 @@
 $(function() {
+	$('#tabs').tabs({
+		active: 1
+	});
+
 	$('#bar').progressbar({
 		value: 33
 	});
