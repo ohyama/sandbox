@@ -9,6 +9,13 @@ $(function() {
 	$('input[type=radio]').button();
 	$('#set').buttonset();
 
+	$('#datepicker').datepicker({
+		dateFormat: 'yy-mm-dd',
+		numberOfMonths: 3,
+		minDate: -2,
+		maxDate: "+2M"
+	});
+
 	$('.accordion').accordion();
 
 	$('.box')
