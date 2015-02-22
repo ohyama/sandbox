@@ -1,4 +1,15 @@
 $(function() {
+	$('#bar').progressbar({
+		value: 33
+	});
+	$('#slider').slider({
+		value: 33,
+		slide: function(event, ui) {
+			console.log(ui.value);
+			$('#bar').progressbar('option', 'value', ui.value);	
+		}
+	});
+
 	var langs = ["ja", "cn", "en", "fr", "sp", "田中", "田口"];
 	$('#langs').autocomplete({
 		source: langs
