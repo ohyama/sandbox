@@ -1,10 +1,15 @@
 $(function() {
 	var langs = ["ja", "cn", "en", "fr", "sp", "田中", "田口"];
-	$("#langs").autocomplete({
+	$('#langs').autocomplete({
 		source: langs
 	});
 
-	$(".accordion").accordion();
+	$('button').button();
+	$('#check').button();
+	$('input[type=radio]').button();
+	$('#set').buttonset();
+
+	$('.accordion').accordion();
 
 	$('.box')
 		.resizable({
