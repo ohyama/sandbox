@@ -4,7 +4,22 @@ $(function() {
 		source: langs
 	});
 
-	$('button').button();
+	$('button')
+		.button()
+		.click(function() {
+			console.log('click!');
+			$('#msg').dialog('open');
+		});
+	$('#msg').dialog({
+		autoOpen: false,
+		title: 'タイトル',
+		buttons: {
+			"OK": function() {
+				$(this).dialog('close');
+			}
+		},
+		modal: true
+	});
 	$('#check').button();
 	$('input[type=radio]').button();
 	$('#set').buttonset();
