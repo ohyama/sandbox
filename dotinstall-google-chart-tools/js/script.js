@@ -24,7 +24,7 @@ function drawChart() {
 		isStacked: true
 	}
 
-	var chart = new google.visualization.ColumnChart(document.getElementById('chart'));
+	var chart = new google.visualization.LineChart(document.getElementById('chart'));
 
 	chart.draw(data, options);
 }
