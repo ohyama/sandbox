@@ -28,3 +28,19 @@
 		color: green;
 	}
 }
+
+.my-mixin() {
+	border: 5px solid red;
+	padding: 7px;	
+}
+
+h3 {
+	font-size: 24px;	
+	.my-mixin();
+}
+
+h4 {
+	font-size: 20px;
+	.my-mixin();	
+}
+
