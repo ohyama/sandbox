@@ -7,10 +7,24 @@
 
 @{header}1 {
 	font-size: @h1-size;
-	color: @h1-color;	
+	a {
+		color: @h1-color;
+		&:hover {
+			color: green;
+		}
+	}
 }
 
 @{header}2 {
 	font-size: @h2-size;
 	color: @h2-color;	
+}
+
+.button {
+	&-ok {
+		color: red;	
+	}
+	&-ng {
+		color: green;
+	}
 }

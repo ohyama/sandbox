@@ -1,8 +1,19 @@
 h1 {
   font-size: 24px;
+}
+h1 a {
   color: red;
+}
+h1 a:hover {
+  color: green;
 }
 h2 {
   font-size: 20px;
   color: #cc0000;
+}
+.button-ok {
+  color: red;
+}
+.button-ng {
+  color: green;
 }
