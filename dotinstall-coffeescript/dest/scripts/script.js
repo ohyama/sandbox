@@ -7,7 +7,7 @@ if (score > 80) {
  */
 
 (function() {
-  var a, b, m, n, score;
+  var a, b, l, m, n, score;
 
   score = 82;
 
@@ -26,5 +26,30 @@ if (score > 80) {
   console.log(m.slice(1, 4));
 
   console.log("world".slice(1, 4));
+
+  m = {
+    name: "ohyama",
+    score: 80
+  };
+
+  n = {
+    name: "ohyama",
+    score: 90
+  };
+
+  l = {
+    name: "ohyama",
+    score: {
+      a: 10,
+      b: 10,
+      c: 20
+    }
+  };
+
+  console.log(m);
+
+  console.log(n);
+
+  console.log(l);
 
 }).call(this);
