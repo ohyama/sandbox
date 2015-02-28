@@ -33,10 +33,26 @@ module.exports = function(grunt) {
 					banner: '/*! <%= pkg.name  %> <%= grunt.template.today("yyyy/mm/dd") %> */'
 				}, 
 				files: {
-					'build/style1.min.css': '<%= less.build1.dest %>'
+					'mysite/css/styles.min.css': '<%= less.build1.dest %>'
 				}
 			}
 		},
+
+		watch: {
+			files: 'src/*.less',
+			tasks: ['less', 'csslint', 'cssmin']
+						 
+		},
+
+		connect: {
+			server: {
+				options: {
+					base: 'mysite',
+					port: 5000,
+					hostname: '127.0.0.1'
+				}
+			}
+		}
 
 	});
 
@@ -44,10 +60,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	// tasks
-	grunt.registerTask('default', ['less', 'csslint', 'cssmin']);
+	grunt.registerTask('default', ['less', 'csslint', 'cssmin', 'connect', 'watch']);
 	grunt.registerTask('task1', 'less:build1');
 	grunt.registerTask('task2', 'less:build2');
 };
