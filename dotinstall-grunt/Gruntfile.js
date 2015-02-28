@@ -9,8 +9,12 @@ module.exports = function(grunt) {
 			},
 			build2: {
 				files: {
-					'build/styles2.css' : 'src/style2.les'
+					'build/styles2.css' : 'src/style2.less'
+				},
+				options: {
+					compress: true
 				}
+
 			}
 		}
 	});
