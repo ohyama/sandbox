@@ -12,3 +12,7 @@ ohyama.hello()
 
 nakayama= new AdminUser "Nakayama"
 nakayama.hello()
+
+x = 20
+rs = if x? then "found" else "not found"
+console.log rs
