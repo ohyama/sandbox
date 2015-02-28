@@ -8,8 +8,9 @@ module.exports = function(grunt) {
 				dest: 'build/styles1.css'
 			},
 			build2: {
-				src: 'src/style2.less',
-				dest: 'build/styles2.css'
+				files: {
+					'build/styles2.css' : 'src/style2.les'
+				}
 			}
 		}
 	});
