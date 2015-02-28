@@ -5,20 +5,19 @@ if (score > 80) {
 }
 ###
 
-socre = 82
+score = 82
 if score > 80
-	alert "score: #{score * 10}"
+	console.log "score: #{score * 10}"
 
-msg = "this
-		is
-		a
-		very
-		long
-		msg"
-html = """
-		<div id="main">
-			hello
-		</div>
-	   """
+a = [1, 3, 5]
+b = [
+  1
+  2
+  3
+]
 
+m = [0..5]
+n = [0...5]
 
+console.log m[1..3]
+console.log "world"[1..3]

@@ -7,16 +7,24 @@ if (score > 80) {
  */
 
 (function() {
-  var html, msg, socre;
+  var a, b, m, n, score;
 
-  socre = 82;
+  score = 82;
 
   if (score > 80) {
-    alert("score: " + (score * 10));
+    console.log("score: " + (score * 10));
   }
 
-  msg = "this is a very long msg";
+  a = [1, 3, 5];
 
-  html = "<div id=\"main\">\n	hello\n</div>";
+  b = [1, 2, 3];
+
+  m = [0, 1, 2, 3, 4, 5];
+
+  n = [0, 1, 2, 3, 4];
+
+  console.log(m.slice(1, 4));
+
+  console.log("world".slice(1, 4));
 
 }).call(this);
