@@ -19,3 +19,18 @@ msg = hello "nakayama"
 console.log msg
 
 do -> console.log "do!!!!"
+
+results = (x)-> [x, x ** 2, x ** 3]
+[a, b, c] = results 5
+console.log a
+console.log b
+console.log c
+
+user =
+  name: "ohyama"
+  score: 50
+  email: "hoge@hoge.com"
+
+{name, email} = user
+console.log name
+console.log email
