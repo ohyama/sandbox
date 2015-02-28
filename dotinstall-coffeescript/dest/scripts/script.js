@@ -15,6 +15,16 @@ if (score > 80) {
     console.log("score: " + (score * 10));
   }
 
+  if (score > 60) {
+    console.log(socre);
+  }
+
+  if (score > 60) {
+    console.log(score);
+  } else {
+    console.log("ng");
+  }
+
   a = [1, 3, 5];
 
   b = [1, 2, 3];
