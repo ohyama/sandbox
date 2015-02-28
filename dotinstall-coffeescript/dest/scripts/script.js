@@ -1,13 +1,22 @@
-
-/*
-var score = 82;
-if (score > 80) {
-	alert("OK");	
-}
- */
-
 (function() {
-  var a, b, l, m, n, score;
+  var a, b, l, m, n, score, signal;
+
+  signal = "green";
+
+  switch (signal) {
+    case "red":
+      console.long("STOP!");
+      break;
+    case "bule":
+    case "green":
+      console.log("GO!");
+      break;
+    case "yellow":
+      console.log("CAUTION");
+      break;
+    default:
+      console.log("Wrong Signal");
+  }
 
   score = 82;
 

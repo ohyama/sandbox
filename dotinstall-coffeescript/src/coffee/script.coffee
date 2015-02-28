@@ -1,9 +1,12 @@
-###
-var score = 82;
-if (score > 80) {
-	alert("OK");	
-}
-###
+signal = "green"
+
+switch signal
+  when "red"
+    console.long "STOP!"
+  when "bule", "green" then console.log "GO!"
+  when "yellow" then console.log "CAUTION"
+  else console.log "Wrong Signal"
+
 
 score = 82
 if score > 80 then console.log "score: #{score * 10}"
