@@ -17,13 +17,20 @@ h2 {
 .button-ng {
   color: green;
 }
+.data,
+.data-extend {
+  color: red;
+}
+.data-extend {
+  boder: 1px solid black;
+}
 h3 {
   font-size: 24px;
   border: 5px solid red;
-  padding: 7px;
+  padding: 10px;
 }
 h4 {
   font-size: 20px;
-  border: 5px solid red;
-  padding: 7px;
+  border: 20px solid red;
+  padding: 10px;
 }
