@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<div>
+	<textarea id="text" rows="10" cols="100">こんにちは、どらえもんです。</textarea>
+</div>
+<button id="btn">再生</button> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+$(function(){
+
+	$('#btn').click(function() {
+		var japanese = new SpeechSynthesisUtterance($('#text').val());
+		japanese.lang = 'ja-JP';
+		speechSynthesis.speak(japanese);
+	});
+
+});
+
+</script>
+</body>
+</html>
