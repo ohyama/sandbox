@@ -22,4 +22,14 @@ $(function(){
 	ctx.fillStyle = g;
 	ctx.fillRect(10, 10, 100, 100);
 	ctx.clearRect(10, 10, 50, 50);
+
+	ctx.fillStyle = "#000";
+	ctx.shadowColor = "#ccc";
+	ctx.shadowOffsetX = 5;
+	ctx.shadowOffsetY = 5;
+	ctx.shadowBlur = 2;
+
+	ctx.globalAlpha = 0.5;
+	
+	ctx.fillRect(100, 100, 100, 100);
 });
