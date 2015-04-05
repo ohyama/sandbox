@@ -31,5 +31,8 @@ $(function(){
 
 	ctx.globalAlpha = 0.5;
 	
+	ctx.scale(0.8, 0.8);
+	ctx.rotate(30/180*Math.PI);
+	ctx.translate(100, 10);
 	ctx.fillRect(100, 100, 100, 100);
 });
