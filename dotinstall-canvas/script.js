@@ -6,6 +6,14 @@ $(function(){
 	
 	var ctx = canvas.getContext('2d');
 
+	ctx.beginPath();
+	ctx.moveTo(20, 20);
+	ctx.lineTo(120, 20);
+	ctx.lineTo(120, 120);
+	ctx.closePath();
+	ctx.fill();
+	//ctx.stroke();
+
 	ctx.strokeStyle = "rgb(255, 0, 0)";
 	ctx.lineWidth = 10;
 	//ctx.lineJoin = "round";
