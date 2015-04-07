@@ -7,9 +7,16 @@ $(function(){
 	var ctx = canvas.getContext('2d');
 
 	ctx.beginPath();
-	ctx.moveTo(20, 20);
-	ctx.lineTo(120, 20);
-	ctx.lineTo(120, 120);
+	ctx.arc(300, 300, 50, 10/180*Math.PI, 210/180*Math.PI);
+	ctx.lineWidth = 10;
+	ctx.lineCap = "square"; // round, butt, square 
+	//ctx.fill();
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.moveTo(200, 200);
+	ctx.lineTo(320, 200);
+	ctx.lineTo(320, 320);
 	ctx.closePath();
 	ctx.fill();
 	//ctx.stroke();
@@ -19,7 +26,7 @@ $(function(){
 	//ctx.lineJoin = "round";
 	//ctx.lineJoin = "bevel";
 	ctx.lineJoin = "miter";
-	ctx.strokeRect(10, 10, 150, 50);
+	ctx.strokeRect(200, 10, 150, 50);
 
 	ctx.fillStyle = "rgb(255, 0, 0)";
 	//var g = ctx.createLinearGradient(0,0,100,100);
