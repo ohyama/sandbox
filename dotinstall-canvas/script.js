@@ -6,6 +6,14 @@ $(function(){
 	
 	var ctx = canvas.getContext('2d');
 
+	ctx.font = 'bold 20px Verdana';
+	ctx.textAlign = 'left'; // right, center, start, end
+	ctx.fillStyle = 'red';
+	ctx.fillText('OHYAMA', 400, 20, 200);
+	ctx.strokeStyle = 'pink';
+	ctx.strokeText('OHYAMA', 400, 40);
+
+
 	ctx.beginPath();
 	ctx.arc(300, 300, 50, 10/180*Math.PI, 210/180*Math.PI);
 	ctx.lineWidth = 10;
