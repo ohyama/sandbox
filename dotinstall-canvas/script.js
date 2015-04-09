@@ -6,6 +6,12 @@ $(function(){
 	
 	var ctx = canvas.getContext('2d');
 
+	var img = new Image();
+	img.src = 'https://pbs.twimg.com/profile_images/378800000220029324/fe66faeca20115da8566e51d83447ead_400x400.jpeg';
+	img.onload = function () {
+		ctx.drawImage(img, 500, 200);
+	};
+
 	ctx.font = 'bold 20px Verdana';
 	ctx.textAlign = 'left'; // right, center, start, end
 	ctx.fillStyle = 'red';
