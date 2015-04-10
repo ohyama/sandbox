@@ -9,6 +9,9 @@ $(function(){
 	var img = new Image();
 	img.src = 'https://pbs.twimg.com/profile_images/378800000220029324/fe66faeca20115da8566e51d83447ead_400x400.jpeg';
 	img.onload = function () {
+		var pattern = ctx.createPattern(img, 'repeat'); // no-repeat, repeat-x, repeat-y
+		ctx.fillStyle = pattern;
+		ctx.fillRect(300, 300, 300, 300);
 		ctx.drawImage(img, 500, 200);
 	};
 
