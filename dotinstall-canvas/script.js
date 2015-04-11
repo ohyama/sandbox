@@ -6,6 +6,8 @@ $(function(){
 	
 	var ctx = canvas.getContext('2d');
 
+	ctx.save();
+
 	var img = new Image();
 	img.src = 'https://pbs.twimg.com/profile_images/378800000220029324/fe66faeca20115da8566e51d83447ead_400x400.jpeg';
 	img.onload = function () {
@@ -22,6 +24,7 @@ $(function(){
 	ctx.strokeStyle = 'pink';
 	ctx.strokeText('OHYAMA', 400, 40);
 
+	ctx.restore();
 
 	ctx.beginPath();
 	ctx.arc(300, 300, 50, 10/180*Math.PI, 210/180*Math.PI);
