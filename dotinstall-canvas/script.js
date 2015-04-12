@@ -8,6 +8,21 @@ $(function(){
 
 	ctx.save();
 
+	ctx.globalAlpha = 0.5;
+
+	for (var i = 0; i < 100; i++) {
+		var x = Math.floor(Math.random() * 400);
+		var y = Math.floor(Math.random() * 200);
+		var r = Math.floor(Math.random() * 200);
+		
+		console.log("rgb(" + rgb() + "," + rgb() + "," + rgb() + ")");
+		ctx.fillStyle = "rgb(" + rgb() + "," + rgb() + "," + rgb() + ")";
+		ctx.beginPath();
+		ctx.arc(x, y, r, 0, 2 * Math.PI);
+		ctx.stroke();
+		ctx.fill();
+	}
+
 	var img = new Image();
 	img.src = 'https://pbs.twimg.com/profile_images/378800000220029324/fe66faeca20115da8566e51d83447ead_400x400.jpeg';
 	img.onload = function () {
@@ -71,3 +86,7 @@ $(function(){
 	ctx.translate(100, 10);
 	ctx.fillRect(100, 100, 100, 100);
 });
+
+function rgb() {
+	return Math.floor(Math.random() * 255);
+}
