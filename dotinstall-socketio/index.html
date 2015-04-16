@@ -9,14 +9,21 @@
 		<input type="text" id="msg">
 		<input type="submit" value="send">
 	</form>
+	<ul id="logs">
+	</ul>
 	<script src="https://cdn.socket.io/socket.io-1.3.4.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script>
 		$(function() {
 			var socket = io.connect();
 
-			$("#myForm").submit(function() {
-				socket.emit('emit_from_client', $('#msg').val()); 
+			$("#myForm").submit(function(e) {
+				e.preventDefault();
+				socket.emit('emit_from_client', $('#msg').val());
+				$('#msg').val('').focus();
+			});
+			socket.on('emit_from_server', function(data) {
+				$('#logs').append($('<li>').text(data));	
 			});
 		});
 	</script>
