@@ -6,6 +6,7 @@
 </head>
 <body>
 	<form id="myForm">
+		<input type="text" id="name">
 		<input type="text" id="msg">
 		<input type="submit" value="send">
 	</form>
@@ -19,7 +20,10 @@
 
 			$("#myForm").submit(function(e) {
 				e.preventDefault();
-				socket.emit('emit_from_client', $('#msg').val());
+				socket.json.emit('emit_from_client', {
+					name: $('#name').val(),
+					msg: $('#msg').val()
+				});
 				$('#msg').val('').focus();
 			});
 			socket.on('emit_from_server', function(data) {
