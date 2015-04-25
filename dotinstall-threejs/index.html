@@ -21,7 +21,7 @@
 			//var material = new THREE.MeshBasicMaterial({color: "red"});
 			var material = new THREE.MeshLambertMaterial({color: "red"});
 			var cube = new THREE.Mesh(geometry, material);
-			cube.position.set(0, 0, 0); // rotate, scale
+			cube.position.set(0, 30, 0); // rotate, scale
 
 			scene.add(cube);
 
@@ -33,6 +33,14 @@
 
 			scene.add(sphere);
 
+			// mesh
+			var pGeometry = new THREE.PlaneBufferGeometry(300, 300);
+			var pMaterial = new THREE.MeshLambertMaterial({ color: 0x0096d6 });
+			var plane = new THREE.Mesh(pGeometry, pMaterial);
+			plane.position.set(0, 0, 0); // rotate, scale
+			plane.rotation.set(-90 * Math.PI / 180, 0, 0);
+			scene.add(plane);
+
 			// light
 			var light = new THREE.DirectionalLight(0xffffff, 1);
 			light.position.set(0, 100, 30);
@@ -43,7 +51,7 @@
 
 			// camera
 			var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-			camera.position.set(200, 200, 500);
+			camera.position.set(100, 200, 300);
 			camera.lookAt(cube.position);
 
 			// helper
