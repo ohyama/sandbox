@@ -7,8 +7,10 @@
 <body>
 	<div id="stage"></div>
 	<script src="js/three.min.js"></script>
+	<script src="js/OrbitControls.js"></script>
 	<script>
 		(function() {
+
 
 			var width = 500;
 			var height = 300;
@@ -67,6 +69,9 @@
 			renderer.setClearColor(0xeeeeee, 1)
 			renderer.shadowMapEnabled = true;
 			document.getElementById('stage').appendChild(renderer.domElement);
+
+			// Control
+			var contorls = new THREE.OrbitControls(camera, render.domElement);
 	
 			function render() {
 				requestAnimationFrame(render);
@@ -76,6 +81,7 @@
 				cube.position.x = Math.sin(new Date().getTime() / 200) * 100;
 				cube.position.z = Math.cos(new Date().getTime() / 200) * 100;
 				renderer.render(scene, camera);
+				contorls.update();
 			}
 
 			render();
