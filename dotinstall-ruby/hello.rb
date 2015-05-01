@@ -1,8 +1,10 @@
-msg = "hello world"
-p msg
+name = "ohyama"
 
-ADMIN_EMAIL = "hoge@hoge.com"
-p ADMIN_EMAIL
+x = "hello world, #{name}"
+y = 'hello world, #{name}'
 
-p ADMIN_EMAIL.length
+puts x
+puts y
 
+puts "hello world," + "ohyama"
+puts "hello " * 5
