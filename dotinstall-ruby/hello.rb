@@ -1,10 +1,5 @@
-name = "ohyama"
-
-x = "hello world, #{name}"
-
-puts x.upcase!
-puts x
-
-p x.empty?
-
-
+sales = [10, 20, 30]
+p sales[0..2]
+p sales[0...2]
+p sales[-1]
+p sales[1, 2]
