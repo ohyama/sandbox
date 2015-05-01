@@ -1,3 +1,5 @@
-print "hello world!"
-puts "hello world(puts)"
-p "hello workd(p)"
+msg = "hello world"
+p msg
+
+ADMIN_EMAIL = "hoge@hoge.com"
+p ADMIN_EMAIL
