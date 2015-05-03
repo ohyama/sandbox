@@ -1,8 +1,9 @@
-#sales = {"taguchi" => 10, "kouji" => 20}
-sales = {taguchi: 10, kouji: 20}
-p sales[:taguchi]
-p sales.size
-p sales.keys
-p sales.values
-p sales.has_key?(:taguchi)
+a = 10
+b = "5"
+p a + b.to_i
+p a + b.to_f
+p a.to_s + b
 
+h = {taguchi: 100, hoge: 20}
+p h.to_a
+p h.to_a.to_h
