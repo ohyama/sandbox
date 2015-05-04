@@ -1,9 +1,9 @@
-a = 10
-b = "5"
-p a + b.to_i
-p a + b.to_f
-p a.to_s + b
+s = %Q(hel"lo)
+s = %q(hel'lo)
+p s
 
-h = {taguchi: 100, hoge: 20}
-p h.to_a
-p h.to_a.to_h
+a = ["a", "b", "c"]
+a = %W[a b c]
+a = %w[a b c]
+
+p a
