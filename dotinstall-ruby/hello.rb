@@ -1,4 +1,11 @@
-b, c = 10, 20
-a = b > c ? b : c
-puts a
+signal = "red"
+
+case signal
+when "red"
+	puts "STOP"
+when "green" "blue"
+	puts "GO"
+else
+	puts "wrong signal"
+end
 
