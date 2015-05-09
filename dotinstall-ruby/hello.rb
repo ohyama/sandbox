@@ -1,11 +1,3 @@
-signal = "red"
-
-case signal
-when "red"
-	puts "STOP"
-when "green" "blue"
-	puts "GO"
-else
-	puts "wrong signal"
+3.times do |i|
+	puts "#{i}: hello"
 end
-
