@@ -6,6 +6,16 @@ class User
 		@name = name
 		@@count += 1
 	end
+=begin
+	def name
+		@name
+	end
+
+	def setName(newName)
+		@neme = newName
+	end
+=end
+	attr_accessor :name
 
 	def sayHi
 		puts "hello, my name is #{@name}"
@@ -32,5 +42,9 @@ bob = SuperUser.new("Bob")
 
 tom.sayHi()
 bob.sayHi()
+puts bob.name
+tom.name = "hoge"
+puts tom.name 
+tom.sayHi()
 bob.shout()
 User.sayHello()
