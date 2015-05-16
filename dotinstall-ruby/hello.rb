@@ -35,6 +35,11 @@ class SuperUser < User
 end
 
 
+t = Time.now
+
+p t.year
+p t.month
+
 
 User.sayHello()
 tom = User.new("Tom")
