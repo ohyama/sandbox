@@ -23,8 +23,10 @@ post = Post.new do |p|
 end
 =end
 
-Post.create(:title => "title4", :body => "hello4")
+#Post.create(:title => "title4", :body => "hello4")
 
 #post.save
 
-p Post.all
+p Post.find(3)
+p Post.find_by_title_and_id("title2", 2)
+
