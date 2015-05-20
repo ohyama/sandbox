@@ -30,3 +30,10 @@ end
 p Post.find(3)
 p Post.find_by_title_and_id("title2", 2)
 
+p Post.where(:title => "title1", :id => 1)
+p Post.where("title = ? and id = ?", "title1", 1)
+p Post.where("title = :title and id = :id", {:title => "title1", :id => 1})
+
+p Post.where("id > ?", 2)
+p Post.where("body like ?", "hello%")
+
