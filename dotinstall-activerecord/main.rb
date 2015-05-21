@@ -5,7 +5,12 @@ ActiveRecord::Base.establish_connection(
 	"database" => "./blog.db"
 )
 
+ActiveRecord::Base.logger = Logger.new(STDOUT)
+
 class Post < ActiveRecord::Base
+
+	scope :top3, -> { order("create_at").limit(3) }
+
 end
 
 #post = Post.new(:title => "title1", :body => "hello1")
@@ -27,6 +32,7 @@ end
 
 #post.save
 
+=begin
 p Post.find(3)
 p Post.find_by_title_and_id("title2", 2)
 
@@ -36,4 +42,12 @@ p Post.where("title = :title and id = :id", {:title => "title1", :id => 1})
 
 p Post.where("id > ?", 2)
 p Post.where("body like ?", "hello%")
+=end
+
+p Post.where(:id => 1..3)
+p Post.where(:id => [1, 3])
+
+p Post.order("id desc").limit(3)
+
+p Post.top3
 
