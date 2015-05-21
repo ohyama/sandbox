@@ -44,10 +44,17 @@ p Post.where("id > ?", 2)
 p Post.where("body like ?", "hello%")
 =end
 
+=begin
 p Post.where(:id => 1..3)
 p Post.where(:id => [1, 3])
 
 p Post.order("id desc").limit(3)
 
 p Post.top3
+=end
 
+Post.where(:title => "title5").first_or_create do |p|
+	p.body = "title5"
+end
+
+p Post.all
