@@ -68,6 +68,7 @@ post.save
 #post.update_attribute(:title, "new2 title")
 #post.update_attributes(:title => "new3 title", :body => "hhh")
 
-Post.where(:id => 1..2).update_all(:title => "new4 title", :body => "iii")
+#Post.where(:id => 1..2).update_all(:title => "new4 title", :body => "iii")
+Post.where(:id => 1..2).delete_all()
 
 p Post.all
