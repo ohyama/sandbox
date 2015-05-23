@@ -53,8 +53,21 @@ p Post.order("id desc").limit(3)
 p Post.top3
 =end
 
+=begin
 Post.where(:title => "title5").first_or_create do |p|
 	p.body = "title5"
 end
+=end
+
+post = Post.find(1)
+=begin
+post.title = "new title"
+post.save
+=end
+
+#post.update_attribute(:title, "new2 title")
+#post.update_attributes(:title => "new3 title", :body => "hhh")
+
+Post.where(:id => 1..2).update_all(:title => "new4 title", :body => "iii")
 
 p Post.all
