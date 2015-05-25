@@ -9,11 +9,23 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 class Post < ActiveRecord::Base
 
+	has_many :comments
+
 	scope :top3, -> { order("create_at").limit(3) }
 
 	validates :title, :presence => true
 	validates :body, :length => { :minimum => 5 }
 end
+
+class Comment < ActiveRecord::Base
+	belongs_to :post
+end
+
+post = Post.find(1)
+post.comments.each do |comment|
+	p comment.body
+end
+
 
 #post = Post.new(:title => "title1", :body => "hello1")
 
@@ -73,6 +85,7 @@ post.save
 #Post.where(:id => 1..2).update_all(:title => "new4 title", :body => "iii")
 #Post.where(:id => 1..2).delete_all()
 
+=begin
 post = Post.new(:body => "123")
 
 if !post.save
@@ -80,3 +93,4 @@ if !post.save
 end
 
 p Post.all
+=end
