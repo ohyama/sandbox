@@ -11,6 +11,8 @@ class Post < ActiveRecord::Base
 
 	scope :top3, -> { order("create_at").limit(3) }
 
+	validates :title, :presence => true
+	validates :body, :length => { :minimum => 5 }
 end
 
 #post = Post.new(:title => "title1", :body => "hello1")
@@ -59,7 +61,7 @@ Post.where(:title => "title5").first_or_create do |p|
 end
 =end
 
-post = Post.find(1)
+#post = Post.find(1)
 =begin
 post.title = "new title"
 post.save
@@ -69,6 +71,12 @@ post.save
 #post.update_attributes(:title => "new3 title", :body => "hhh")
 
 #Post.where(:id => 1..2).update_all(:title => "new4 title", :body => "iii")
-Post.where(:id => 1..2).delete_all()
+#Post.where(:id => 1..2).delete_all()
+
+post = Post.new(:body => "123")
+
+if !post.save
+	p post.errors.messages
+end
 
 p Post.all
