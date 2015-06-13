@@ -17,10 +17,10 @@
 </ul>
 <script>
 	$(function() {
-		$("input[type=checkbox]").click(fucntion() {
-			$.post('/projects/'+$(this).data('project_id')+'/tasks/'+$(this).data('id')+'/toggle')
-		})
-	})
+		$("input[type=checkbox]").click(function() {
+			$.post('/projects/' + $(this).data('project_id') + '/tasks/' + $(this).data('id') + '/toggle');
+		});
+	});
 </script>
 
 
