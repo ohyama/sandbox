@@ -17,3 +17,7 @@ get '/hello/:name' do
   "hello #{params[:name]}"
 end
 
+get '/from/*/to/*' do |f, t|
+  "from #{f} to #{t}"
+end
+
