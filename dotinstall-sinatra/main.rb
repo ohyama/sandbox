@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  "hello world"
+  erb :index
 end
 
 get '/hello3/:fname/?:lname?/?' do |f, l|
