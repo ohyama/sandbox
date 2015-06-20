@@ -1,7 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
-get '/' do
+get '/:name' do |n|
+  @name = n
   erb :index
 end
 
@@ -20,4 +21,3 @@ end
 get '/from/*/to/*' do |f, t|
   "from #{f} to #{t}"
 end
-
