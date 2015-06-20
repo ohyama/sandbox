@@ -1,8 +1,15 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
-get '/:name' do |n|
+get '/about' do
+  @content = 'about'
+  @email = 'hoge@hoge.com'
+  erb :about
+end
+
+get '/:name?' do |n|
   @name = n
+  @content = 'main content'
   erb :index
 end
 
