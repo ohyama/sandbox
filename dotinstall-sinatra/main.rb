@@ -9,6 +9,14 @@ after do
   logger.info "page diplayed successfully."
 end
 
+helpers do
+
+  def strong(s)
+    "<strong>#{s}</strong>"
+  end
+
+end
+
 get '/about' do
   @content = 'about this page is ... by ' + @author
   @email = 'hoge@hoge.com'
@@ -17,7 +25,7 @@ end
 
 get '/:name?' do |n|
   @name = n
-  @content = 'main content by ' + @author
+  @content = 'main content by ' + strong(@author)
   erb :index
 end
 
