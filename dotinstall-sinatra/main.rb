@@ -1,15 +1,23 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
+before do
+  @author = "ohyama"
+end
+
+after do
+  logger.info "page diplayed successfully."
+end
+
 get '/about' do
-  @content = 'about'
+  @content = 'about this page is ... by ' + @author
   @email = 'hoge@hoge.com'
   erb :about
 end
 
 get '/:name?' do |n|
   @name = n
-  @content = 'main content'
+  @content = 'main content by ' + @author
   erb :index
 end
 
