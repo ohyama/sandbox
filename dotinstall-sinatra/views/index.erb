@@ -7,7 +7,9 @@
 <body>
 	<h1>BBS</h1>
 	<ul>
-		<li></li>
+		<% @comments.each do |comment| %>
+			<li data-id=<%=commnet.id%>></li>
+		<% end %>
 	</ul>
 </body>
 </html>

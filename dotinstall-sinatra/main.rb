@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'active_record'
 
-ActiveRecord::Base.estableish_connection(
+ActiveRecord::Base.establish_connection(
   "adapter" => "sqlite3",
   "database" => "./bbs.db"
 )
